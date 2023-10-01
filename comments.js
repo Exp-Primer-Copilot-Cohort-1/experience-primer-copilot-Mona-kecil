@@ -1,85 +1,54 @@
-// Create a web server
-// Path: server.js
-const http = require('http');
+// Create web server
+// 1. Create a web server
+// 2. Create a route for the home page
+// 3. Create a route for comments
+// 4. Create a route for comments/new
+// 5. Create a route for comments/:id
+// 6. Create a route for comments/:id/edit
+// 7. Create a route for comments/:id/delete
+// 8. Create a route for comments/:id/update
 
-const server = http.createServer((req, res) => {
-    // Handle incoming requests here.
+// 1. Create a web server
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// 2. Create a route for the home page
+app.get('/', (req, res) => {
+  res.send('Welcome to the home page!');
 });
 
-server.listen(3000, () => {
-    console.log('Server running on port 3000');
+// 3. Create a route for comments
+app.get('/comments', (req, res) => {
+  res.send('Welcome to the comments page!');
 });
 
-// Create a web server
-// Path: server.js
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-    res.end('Hello, world!');
+// 4. Create a route for comments/new
+app.get('/comments/new', (req, res) => {
+  res.send('Welcome to the comments page!');
 });
 
-server.listen(3000, () => {
-    console.log('Server running on port 3000');
+// 5. Create a route for comments/:id
+app.get('/comments/:id', (req, res) => {
+  res.send('Welcome to the comments page!');
 });
 
-// Create a web server
-// Path: server.js
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.end('Hello, world!');
+// 6. Create a route for comments/:id/edit
+app.get('/comments/:id/edit', (req, res) => {
+  res.send('Welcome to the comments page!');
 });
 
-server.listen(3000, () => {
-    console.log('Server running on port 3000');
+// 7. Create a route for comments/:id/delete
+app.get('/comments/:id/delete', (req, res) => {
+  res.send('Welcome to the comments page!');
 });
 
-// Create a web server
-// Path: server.js
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain'); // Set the content type to plain text.
-    res.end('Hello, world!');
+// 8. Create a route for comments/:id/update
+app.get('/comments/:id/update', (req, res) => {
+  res.send('Welcome to the comments page!');
 });
 
-server.listen(3000, () => {
-    console.log('Server running on port 3000');
+// 9. Start the web server
+app.listen(port, () => {
+  console.log(`Web server is listening on port ${port}!`);
 });
-
-// Create a web server
-// Path: server.js
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json'); // Set the content type to JSON.
-    res.end('{"message": "Hello, world!"}');
-});
-
-server.listen(3000, () => {
-    console.log('Server running on port 3000');
-});
-
-// Create a web server
-// Path: server.js
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html'); // Set the content type to HTML.
-    res.end('<h1>Hello, world!</h1>');
-});
-
-server.listen(3000, () => {
-    console.log('Server running on port 3000');
-});
-
-// Create a web server
-// Path: server.js
-const http = require('http');
-const fs = require('fs');
-
-const server = http.createServer((req, res) => {
